@@ -1,27 +1,24 @@
 import React, {Component} from 'react';
-import Welcome from './Welcome';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Alert, Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
 import styles from '../styles/App';
 
 export default class App extends Component {
-  state = {
-    slogan: 'Seu canal de nerdologia',
-  }
-
-  alternar = () => {
-    this.setState({
-      slogan: this.state.slogan ? '' : 'Seu canal de nerdologia',
-    });
+  clicou = () => {
+    Alert.alert('Canal GeekDev', 'Você clicou em mim');
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={this.alternar}>
-          <Text>Mudar state</Text>
+        <Image
+          style={styles.logo}
+          source={require('../assets/react-logo.png')}
+        />
+        <TextInput style={styles.input} placeholder="Digite seu email" />
+        <TextInput style={styles.input} secureTextEntry={true} placeholder="Digite sua senha" />
+        <TouchableOpacity style={styles.botao} onPress={() => {this.clicou()}}>
+          <Text style={styles.botaoText}>Login</Text>
         </TouchableOpacity>
-        <Text>Canal Geek Dev</Text>
-        <Text>{this.state.slogan}</Text>
       </View>
     );
   }

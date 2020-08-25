@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#0066cc',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#2c3e50',
   },
   texto: {
     color: '#fff',
@@ -13,6 +13,34 @@ const styles = StyleSheet.create({
   },
   slogan: {
     color: '#000',
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+  },
+  input: {
+    marginTop: 10,
+    padding: 10,
+    width: 300,
+    backgroundColor: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    borderRadius: 3,
+  },
+  botao: {
+    width: 300,
+    height: 42,
+    backgroundColor: '#3498db',
+    marginTop: 10,
+    borderRadius: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  botaoText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#fff',
   },
 });
 
