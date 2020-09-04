@@ -7,7 +7,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Bem vindo a sua página Home</Text>
+        <Text style={styles.texto}>Bem vindo a sua página Home</Text>
       </View>
     );
   }

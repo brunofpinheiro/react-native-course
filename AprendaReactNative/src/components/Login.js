@@ -14,6 +14,10 @@ export default class Login extends Component {
     Alert.alert('Canal GeekDev', 'Você clicou em mim');
   };
 
+  state = {
+    nome: '',
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -21,7 +25,11 @@ export default class Login extends Component {
           style={styles.logo}
           source={require('../assets/react-logo.png')}
         />
-        <TextInput style={styles.input} placeholder="Digite seu email" />
+        <TextInput
+          style={styles.input}
+          onChangeText={(text) => (this.state.nome = text)}
+          placeholder="Digite seu email"
+        />
         <TextInput
           style={styles.input}
           secureTextEntry={true}

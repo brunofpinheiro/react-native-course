@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
-import {createAppContainer, createStackNavigator} from 'react-navigation';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import Login from './Login';
 import Home from './Home';
 
-const MainNav = createStackNavigator({
-  Login: {
-    screen: Login,
-    navigationOptions: {
-      header: null,
+const MainNav = createAppContainer(
+  createStackNavigator({
+    Login: {
+      screen: Login,
+      navigationOptions: {
+        headerShown: false,
+      },
     },
     Home: {
       screen: Home,
@@ -15,7 +18,7 @@ const MainNav = createStackNavigator({
         headerTitle: 'Home',
       },
     },
-  },
-});
+  }),
+);
 
-export default createAppContainer(MainNav);
+export default MainNav;
