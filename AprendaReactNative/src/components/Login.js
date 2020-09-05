@@ -27,7 +27,7 @@ export default class Login extends Component {
         />
         <TextInput
           style={styles.input}
-          onChangeText={(text) => (this.state.nome = text)}
+          onChangeText={text => (this.state.nome = text)}
           placeholder="Digite seu email"
         />
         <TextInput
@@ -38,7 +38,7 @@ export default class Login extends Component {
         <TouchableOpacity
           style={styles.botao}
           onPress={() => {
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('Home', {'nome': this.state.nome});
           }}>
           <Text style={styles.botaoText}>Login</Text>
         </TouchableOpacity>
