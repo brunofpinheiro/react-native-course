@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {View, Image, StyleSheet} from 'react-native';
 
-export default class Home extends Component {
+export default class Settings extends Component {
 
   static navigationOptions = {
-    drawerLabel: 'Home'
+    drawerLabel: 'Configuração'
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.logo} source={require('../assets/home.png')}></Image>
+        <Image style={styles.logo} source={require('../assets/settings.png')}></Image>
       </View>
     );
   }
